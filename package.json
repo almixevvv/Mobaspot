@@ -1,0 +1,28 @@
+{
+	"name": "mobaspot",
+	"version": "1.0.1",
+	"description": "basic web template",
+	"main": "basic-tailwind.config.js",
+	"dependencies": {
+		"autoprefixer": "^10.2.5",
+		"postcss": "^8.2.8",
+		"slick-carousel": "^1.8.1",
+		"tailwindcss": "^2.0.4"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build-css": "tailwindcss build source/styles.css -o public/styles.css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/almixevvv/Mobaspot.git"
+	},
+	"keywords": [ "Wordpress", "Template" ],
+	"author": "Al Mixev Victoro",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/almixevvv/Mobaspot/issues"
+	},
+	"homepage": "https://github.com/almixevvv/Mobaspot#readme"
+}

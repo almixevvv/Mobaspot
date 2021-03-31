@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobaspot - Template</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+</head>
+
+<body class="font-ubuntu">
+
+    <div>
+        <header class="sticky top-0 z-20">
+
+            <div  x-data="{ isOpen: false }">
+
+                <div x-bind:class="{'-translate-x-0' : isOpen}" class="transform duration-300 fixed top-0 right-0 bg-white h-full z-30 overflow-x-hidden border-l-2 border-gray-300 translate-x-56 w-56">
+                    <div>
+                        <svg @click="{isOpen = !isOpen }" class="w-10 md:w-12 ml-2 mt-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div> <!-- close button -->
+                    <div class="mt-10">
+                        <ul>
+                            <li class="hamburger-nav">
+                                <a class="text-base md:text-xl" href="index.html">
+                                    home
+                                </a>
+                            </li>
+                            <li class="hamburger-nav">
+                                <a class="text-base md:text-xl" href="topics.html">
+                                    moba
+                                </a>
+                            </li>
+                            <li class="hamburger-nav">
+                                <a class="text-base md:text-xl" href="topics.html">
+                                    pc  
+                                </a>
+                            </li>
+                            <li class="hamburger-nav">
+                                <a class="text-base md:text-xl" href="topics.html">
+                                    culture
+                                </a>
+                            </li>
+                        </ul>
+                    </div> <!-- menu list -->
+
+                    <div class="mt-20">
+                        <ul>
+                            <li class="hamburger-nav">
+                                <a class="text-base md:text-xl"href="#">about us</a>
+                            </li>
+                            <li class="hamburger-nav">
+                                <a class="text-base md:text-xl"href="#">
+                                    contact us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex justify-center mt-16">
+                        <img class="w-36 object-cover" src="img/LogoMakr-90bq3G.png" alt="Mobaspot Logo">
+                    </div>
+                </div> <!-- sidebar container -->
+
+                <div class="flex justify-between bg-primary-100 p-2 z-30 ">
+                    <span>
+                        <img class="w-20 md:w-36 ml-0 lg:ml-7" src="img/LogoMakr-90bq3G.png" alt="Mobaspot Logo">
+                    </span>
+                    <span class="hidden lg:flex lg:items-center">
+                        <ul class="flex">
+                            <li class="navbar-nav">news</li>
+                            <li class="navbar-nav">culture</li>
+                            <li class="navbar-nav">review</li>
+                            <li class="navbar-nav">list</li>
+                            <li class="navbar-nav">
+                                <svg class="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                                  </svg>
+                            </li>
+                        </ul>
+                    </span> <!-- desktop navbar -->
+                    
+                    <span class="flex bg-primary-200 rounded md:mr-5 lg:hidden md:items-center md:px-2">
+                        <svg @click="isOpen = !isOpen" x-bind:class="{'rotate-90' : isOpen}" class="transform duration-300 h-9 md:h-12 p-1" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke="white">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- hamburger here -->
+                    </span>
+                </div> <!-- navbar container here -->
+
+            </div> <!-- mobile header container here -->
+
+        </header>
+
+       <section >
+            <div class="border-b border-gray-400 w-full">
+                <div class="ml-3 my-1 md:mx-8 xl:ml-28">
+                    <ul class="flex items-center">
+                        <li class="text-sm md:text-lg lg:text-xl xl:text-base text-gray-500">Home</li>
+                        <li class="align-middle ml-2 mr-2">
+                            <div class="breadcrumbs-separator md:tablet-breadcrumbs-separator opacity-100"></div> <!-- breadcrumbs triangle-->
+                        </li>
+                        <li class="text-sm md:text-lg lg:text-xl xl:text-base text-gray-500">Moba</li>
+                        <li class="align-middle ml-2 mr-2">
+                            <div class="breadcrumbs-separator md:tablet-breadcrumbs-separator opacity-100"></div> <!-- breadcrumbs triangle-->
+                        </li>
+                        <li class="text-sm md:text-lg lg:text-xl xl:text-base text-center sm:text-left text-gray-500">Tips & Trick</li>
+                        <li class="align-middle ml-2 mr-2">
+                            <div class="breadcrumbs-separator md:tablet-breadcrumbs-separator opacity-100"></div> <!-- breadcrumbs triangle-->
+                        </li>
+                        <li class="text-sm md:text-lg lg:text-xl xl:text-base text-center sm:text-left text-gray-500">
+                            How to Win in Mobile ...
+                        </li>
+                    </ul>
+                </div> <!-- article breadcrumbs -->
+            </div>
+        </section>
+        
+        <section class="mt-2 mx-2 md:mx-8 lg:mt-5 xl:mx-28">
+            <div>
+                <div class="articles-tags-container inline-block">
+                    <h4 class="uppercase text-xl md:text-2xl xl:text-lg text-white p-1 md:p-2 xl:px-2 xl:pt-1 xl:pb-1">moba</h4>
+                </div> <!-- article category container-->
+    
+                <div class="mt-1 md:mt-3 xl:mt-1">
+                    <h1 class="text-2xl md:text-3xl lg:text-xl xl:text-5xl font-semibold">Here's Why You Should Be Afraid of the Machines</h1>
+                </div> <!-- article title container-->
+
+                <div class="mt-0 md:mt-1 pr-0">
+                    <p class="w-full md:w-3/4 lg:w-4/5 text-gray-500 font-regular text-base md:text-xl xl:text-2xl md:text-justify">The machines are taking over, and it's better if we accept our new lord and saviour</p>
+                </div> <!-- article exceprt -->
+
+                <div class="flex mt-1 md:mt-0 lg:mt-1">
+                    <span class="mr-1 text-base md:text-lg xl:text-base"><p>by</p></span>
+                    <span>
+                        <h2 class="text-base md:text-xl xl:text-base font-medium text-primary-100 ml-1">Author Name</h2>
+                    </span>
+                    <span class="ml-2 border-gray-400 border-l-2">
+                        <p class="ml-2 text-xs md:text-xl xl:text-base font-medium text-gray-500">Mar 22, 2021</p>
+                    </span>
+                </div>
+            </div>
+
+        </section> <!-- main article section -->
+
+        <section class="mt-2 md:mt-3 md:mx-8 xl:mx-28">
+            <ul class="flex">
+                <li class="w-10 lg:w-9 ml-1 md:ml-0 mr-2 md:mr-3 lg:mr-1">
+                    <div class="p-3 xl:p-2 rounded-full flex justify-center" style="background-color: #1DA1F2;">
+                        <i class="text-2xl xl:text-base fab fa-twitter text-white"></i>
+                    </div>
+                </li>
+                <li class="w-10 lg:w-9 ml-1 lg:ml-2 mr-2 md:mr-3 lg:mr-1">
+                    <div class="p-3 xl:p-2 rounded-full flex justify-center" style="background-color: #295396;">
+                        <i class="text-2xl xl:text-base fab fa-facebook-f text-white"></i>
+                    </div>
+                </li>
+                <li class="w-10 lg:w-9 ml-1 lg:ml-2 mr-2 md:mr-3 lg:mr-1">
+                    <div class="p-3 xl:p-2 rounded-full flex justify-center" style="background-color: #25D366;">
+                        <i class="text-2xl xl:text-base fab fa-whatsapp text-white"></i>
+                    </div>
+                </li>
+                <li class="w-10 lg:w-9 ml-1 lg:ml-2 mr-2 md:mr-3 lg:mr-1">
+                    <div class="p-3 xl:p-2 rounded-full flex justify-center" style="background-color: #EE4E10;">
+                        <i class="text-2xl xl:text-base fas fa-envelope text-white"></i>
+                    </div>
+                </li>
+            </ul>
+        </section> <!-- article social buttons -->
+
+        <section class="flex lg:grid lg:grid-cols-3">
+
+            <div class="col-span-3 lg:col-span-2">
+                <section class="mt-5 ml-0 mx-0 lg:ml-9 lg:mr-10 xl:ml-28 xl:mr-12">
+                    <div>
+                        <img class="w-full object-cover" src="https://gamefever.co.id/wp-content/uploads/2019/11/horizon-zero-dawn-impact-poster-ps4-us-07feb17-960x540.jpg" alt="Article Featured Image">
+                        <small>
+                            <div>
+                                <p class="mx-5">Image:  <span class="text-gray-500 font-medium">rockpapershotgun.com</span> </p>
+                            </div>
+                        </small>
+                    </div>
+                </section> <!-- articles Featured Image -->
+
+                <article class="mt-3 mx-5 text-justify lg:mx-8 xl:ml-28">
+
+                    <div class="relative border-b-2 border-primary-100 my-5">
+                        <div class="relative w-7 h-7 bg-primary-100">
+                            <p class="absolute left-2 text-white text-xl">1</p>
+                            <h3 class="absolute left-10 w-80 uppercase text-gray-800 text-2xl font-medium">latest news</h3>
+                        </div> <!-- list number container -->
+                        <div class="categories-separator-end absolute right-0 top-2">
+                        </div> <!-- triangle section here -->
+                    </div> <!-- article list container -->
+
+                    <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing <a href="#" class="text-primary-100 font-semibold">elit</a>. Voluptas, praesentium similique! Eum magni, consequatur explicabo incidunt 
+                    rerum possimus non totam sequi id. Illo optio quisquam dicta, 
+                    quaerat debitis cupiditate deleniti.
+                    </p>
+
+                    <p class="mt-3 text-lg">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quasi eaque, hic saepe architecto dolorum esse beatae a! 
+                        Impedit exercitationem <a href="#" class="text-primary-100 font-semibold">adipisci amet</a> veniam magni alias. Architecto sint dolore a asperiores?
+                    </p>
+
+                    <p class="mt-3 text-lg">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quasi eaque, hic saepe architecto dolorum esse beatae a! 
+                        Impedit exercitationem <a href="#" class="text-primary-100 font-semibold">adipisci amet</a> veniam magni alias. Architecto sint dolore a asperiores?
+                    </p>
+
+                    <section class="w-full my-8">
+                        <div class="relative lg:mx-8">
+                            <img class="main-articles-image" src="articles/Image 14.png" alt="Featured Image 1">
+                            <div class="absolute bottom-0 bg-gradient-to-t from-black w-full h-full">
+                                <!-- pb-4 pl-2 -->
+                                <div class="absolute bottom-0 md:bottom-6">
+                                    <div class="w-full pl-2 md:pl-5 md:w-9/12 z-20 text-gray-200 font-semibold">
+                                        <h3 class="text-2xl md:text-5xl">Meet the Woman That Your Son is Simping</h3>
+                                    </div>
+                                    <div class="pl-2 mb-4 md:pl-5 md:pt-2">
+                                        <h4 class="inline-block text-gray-200 font-normal mr-1 text-base md:text-lg">by</h4>
+                                        <h5 class="inline-block text-gray-200 font-semibold mr-1 text-base md:text-xl">Author</h5>
+                                        <p class="inline-block text-gray-400 font-light text-base md:text-xl">1 hour ago</p>
+                                    </div>
+
+                                </div>
+                            </div> <!-- article titles -->
+                        </div>
+
+                    </section> <!-- main article here -->
+
+                    <div class="relative border-b-2 border-primary-100 mb-2">
+                        <div class="relative w-7 h-7 bg-primary-100">
+                            <p class="absolute left-2 text-white text-xl">2</p>
+                            <h3 class="absolute left-10 w-80 uppercase text-gray-800 text-2xl font-medium">latest news</h3>
+                        </div> <!-- list number container -->
+                        <div class="categories-separator-end absolute right-0 top-2">
+                        </div> <!-- triangle section here -->
+                    </div> <!-- article category separator -->
+
+                    <p class="text-lg mt-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quasi eaque, hic saepe architecto dolorum esse beatae a! 
+                        Impedit exercitationem <a href="#" class="text-primary-100 font-semibold">adipisci amet</a> veniam magni alias. Architecto sint dolore a asperiores?
+                    </p>
+
+                    <div class="my-4 mx-0 lg:mx-14 lg:my-7">
+                        <img class="w-full object-cover" src="articles/Image 12.png" alt="Article Featured Image">
+                        <small>
+                            <div>
+                                <p class="ml-2">Image:  <span class="text-gray-400 font-medium">rockpapershotgun.com</span> </p>
+                            </div>
+                        </small>
+                    </div>
+
+                    <p class="text-lg mt-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quasi eaque, hic saepe architecto dolorum esse beatae a! 
+                        Impedit exercitationem <a href="#" class="text-primary-100 font-semibold">adipisci amet</a> veniam magni alias. Architecto sint dolore a asperiores?
+                    </p>
+
+                </article>
+
+                <section class="mt-2 md:mt-3 md:mx-8 xl:mx-28">
+                    <ul class="flex">
+                        <li class="w-10 lg:w-9 ml-1 md:ml-0 mr-2 md:mr-3 lg:mr-1">
+                            <div class="p-3 xl:p-2 rounded-full flex justify-center" style="background-color: #1DA1F2;">
+                                <i class="text-2xl xl:text-base fab fa-twitter text-white"></i>
+                            </div>
+                        </li>
+                        <li class="w-10 lg:w-9 ml-1 lg:ml-2 mr-2 md:mr-3 lg:mr-1">
+                            <div class="p-3 xl:p-2 rounded-full flex justify-center" style="background-color: #295396;">
+                                <i class="text-2xl xl:text-base fab fa-facebook-f text-white"></i>
+                            </div>
+                        </li>
+                        <li class="w-10 lg:w-9 ml-1 lg:ml-2 mr-2 md:mr-3 lg:mr-1">
+                            <div class="p-3 xl:p-2 rounded-full flex justify-center" style="background-color: #25D366;">
+                                <i class="text-2xl xl:text-base fab fa-whatsapp text-white"></i>
+                            </div>
+                        </li>
+                        <li class="w-10 lg:w-9 ml-1 lg:ml-2 mr-2 md:mr-3 lg:mr-1">
+                            <div class="p-3 xl:p-2 rounded-full flex justify-center" style="background-color: #EE4E10;">
+                                <i class="text-2xl xl:text-base fas fa-envelope text-white"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </section> <!-- article social buttons -->
+
+                <section class="ml-2 md:mx-28 xl:mt-5 xl:mb-3">
+                    <div>
+                        <h5 class="font-semibold text-base md:text-xl xl:text-lg">Related Tags</h5>
+                    </div>
+                    <div class="flex mt-2">
+                        <div class="mr-4 articles-tags-container block">
+                            <h4 class="uppercase text-sm md:text-lg xl:text-base text-white p-1 md:p-2 xl:p-1 xl:px-2">moba</h4>
+                        </div> <!-- article category container-->
+
+                        <div class="mr-4 articles-tags-container block">
+                            <h4 class="uppercase text-sm md:text-lg xl:text-base text-white p-1 md:p-2 xl:p-1 xl:px-2">horizon zero dawn</h4>
+                        </div> <!-- article category container-->
+
+                        <div class="mr-4 articles-tags-container block">
+                            <h4 class="uppercase text-sm md:text-lg xl:text-base text-white p-1 md:p-2 xl:p-1 xl:px-2">gaming tips</h4>
+                        </div> <!-- article category container-->
+                    </div>
+                </section> <!-- related tags section -->
+
+                <section class="mx-2 mt-5 lg:mx-8 xl:mx-28">
+                    <div class="flex items-center bg-gray-200 rounded p-5">  
+                        <div class="mr-4">
+                            <img class="w-40 md:w-36 lg:w-28" src="img/discord_icon_130958.png" alt="Author Image">
+                        </div>
+                        <div>
+                            <span>
+                                <h5 class="text-xl md:text-2xl xl:text-xl text-gray-700 font-medium uppercase">Author Name</h5>
+                            </span>
+                            <span>
+                                <p class="text-base md:text-lg xl:text-base text-gray-600 font-medium xl:font-normal">Lorem ipsum dolor sit amet, sonsectetur adipiscingg elit, sed do eiusmod tempor</p>
+                            </span>
+                        </div>
+                    </div>
+                </section> <!-- author section -->
+
+            </div>
+
+            <div class="hidden lg:block mr-5">
+                <div class="categories-separator-line relative mr-8">
+                    <h3 class="uppercase text-primary-100 text-2xl md:text-3xl xl:text-xl font-bold md:font-semibold lg:ml-10">latest news</h3>
+                    <div class="categories-separator-start absolute left-0 top-4 xl:top-2">
+                    </div> <!-- triangle section here -->
+                </div> <!-- article category separator -->
+
+                <article class="ml-7">
+                    <div class="block ml-3 mr-8 border-b-2 border-gray-400 mb-3">
+                        <div class="mb-3">
+                            <img class="main-list-2-image" src="articles/1_UtsnPguqwnFk3UPo7SO1ng.jpeg" alt="Article Featured Image">
+                        </div> <!-- article feature image -->
+                        <div>
+                            <h1 class="article-list-title">Dark Souls and Something</h1>
+                            <p class="text-lg font-medium text-gray-700 xl:font-light xl:text-base">Here's something about Dark Souls that you must've never heard</p>
+                            <div class="mt-0 mb-4 md:mt-1">
+                                <p class="space-x-1">
+                                    <span class="text-base md:text-xl xl:text-lg">by</span>
+                                    <span class="article-list-author">Author</span>
+                                    <span class="font-semibold md:font-medium text-gray-500 md:text-xl lg:text-base">1 hours ago</span>
+                                </p>
+                            </div>
+                        </div> <!-- article contents -->
+                    </div>  
+                </article> <!-- article container -->
+
+                <article class="ml-7">
+                    <div class="block ml-3 mr-8 border-b-2 border-gray-400 mb-3">
+                        <div class="mb-3">
+                            <img class="main-list-2-image" src="articles/assassins-creed-odyssey-scaled.jpg" alt="Article Featured Image">
+                        </div> <!-- article feature image -->
+                        <div>
+                            <h1 class="article-list-title">Why Assassin's Creed Odssey is a Must Play in 2021</h1>
+                            <p class="text-lg font-medium text-gray-700 xl:font-light xl:text-base">Here's something about Dark Souls that you must've never heard</p>
+                            <div class="mt-0 mb-4 md:mt-1">
+                                <p class="space-x-1">
+                                    <span class="text-base md:text-xl xl:text-lg">by</span>
+                                    <span class="article-list-author">Author</span>
+                                    <span class="font-semibold md:font-medium text-gray-500 md:text-xl lg:text-base">1 hours ago</span>
+                                </p>
+                            </div>
+                        </div> <!-- article contents -->
+                    </div>  
+                </article> <!-- article container -->
+    
+                <article class="ml-7">
+                    <div class="block ml-3 mr-8 mb-3">
+                        <div class="mb-3">
+                            <img class="main-list-2-image" src="articles/Lucian_19.jpg" alt="Article Featured Image">
+                        </div> <!-- article feature image -->
+                        <div>
+                            <h1 class="article-list-title">Faker's Guide on How to Play as Lucian Mid</h1>
+                            <p class="text-lg font-medium text-gray-700 xl:font-light xl:text-base">Here's something about Dark Souls that you must've never heard</p>
+                            <div class="mt-0 mb-4 md:mt-1">
+                                <p class="space-x-1">
+                                    <span class="text-base md:text-xl xl:text-lg">by</span>
+                                    <span class="article-list-author">Author</span>
+                                    <span class="font-semibold md:font-medium text-gray-500 md:text-xl lg:text-base">1 hours ago</span>
+                                </p>
+                            </div>
+                        </div> <!-- article contents -->
+                    </div>  
+                </article> <!-- article container -->
+                
+            </div>
+
+        </section>
+
+        <section class="mt-5 mb-5 px-2 relative lg:px-10 xl:mx-28 xl:px-0">
+            <div class="categories-separator-line">
+                <h3 class="uppercase text-primary-100 text-2xl md:text-3xl xl:text-2xl font-bold md:font-semibold">recent picks</h3>
+                <div class="categories-separator-end absolute right-2 xl:right-0 top-4 xl:top-3">
+                </div> <!-- triangle section here -->
+            </div> <!-- article category separator -->
+
+            <article class="border-b-2 border-gray-400 mb-3">
+                <div class="grid grid-cols-2 mb-3 xl:flex">
+                    <div class="main-list-image min-w-full max-w-full xl:min-w-1/2 xl:max-w-1/2">
+                        <img class="w-full" src="articles/1_UtsnPguqwnFk3UPo7SO1ng.jpeg" alt="Article Featured Image">
+                    </div> <!-- article feature image -->
+                    <div class="main-list-title-container">
+                        <div class="hidden lg:inline-block articles-tags-container mb-2">
+                            <h4 class="uppercase text-sm md:text-lg lg:text-xl text-white p-1 md:p-2 lg:p-1 lg:pl-2 lg:pr-2">moba</h4>
+                        </div> <!-- article category container-->
+
+                        <h1 class="article-list-title">Dark Souls and Something</h1>
+                        <p class="hidden md:inline-block text-lg xl:text-lg font-medium xl:font-normal text-gray-700">Here's something about Dark Souls that you must've never heard</p>
+                        <div class="mt-0 md:mt-1 lg:mt-1 xl:mt-2">
+                            <ul class="flex items-center">
+                                <li class="mx-2 ml-0">
+                                    <span class="text-base md:text-xl ">by</span>
+                                </li>
+                                <li class="mx-2 ml-0">
+                                    <img class="w-11 hidden lg:inline-block" src="img/discord_icon_130958.png" alt="Author Image">
+                                </li>
+                                <li class="mx-2 ml-0">
+                                    <span class="article-list-author">Author</span>
+                                </li>
+                                <li class="mx-2 ml-0">
+                                    <span class="font-semibold md:font-medium text-gray-500 md:text-xl">1 hours ago</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden mt-3 xl:mt-5 lg:flex">
+                            <span class="rounded-lg bg-primary-100 flex items-center">
+                                <svg class="w-8 m-2 xl:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white">
+                                    <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+                                </svg>
+                                <p class="uppercase text-white text-lg pr-4">share</p>
+                            </span>
+                        </div>
+                    </div> <!-- article contents -->
+                </div>  
+            </article> <!-- article container -->
+
+            <article class="border-b-2 border-gray-400 mb-3">
+                <div class="grid grid-cols-2 mb-3 xl:flex">
+                    <div class="main-list-image min-w-full max-w-full xl:min-w-40 xl:max-w-40">
+                        <img class="w-full object-cover" src="articles/assassins-creed-odyssey-scaled.jpg" alt="Article Featured Image">
+                    </div> <!-- article feature image -->
+                    <div class="main-list-title-container">
+
+                        <div class="hidden lg:inline-block articles-tags-container mb-2">
+                            <h4 class="uppercase text-sm md:text-lg lg:text-xl text-white p-1 md:p-2 lg:p-1 lg:pl-2 lg:pr-2"">moba</h4>
+                        </div> <!-- article category container-->
+
+                        <h1 class="article-list-title">Why Assassin's Creed Odssey is a Must Play in 2021</h1>
+                        <p class="hidden md:inline-block text-lg xl:text-lg font-medium xl:font-normal text-gray-700">Here's something about Dark Souls that you must've never heard</p>
+                        <div class="mt-0 md:mt-1 lg:mt-1">
+                            <ul class="flex items-center">
+                                <li class="mx-2 ml-0">
+                                    <span class="text-base md:text-xl">by</span>
+                                </li>
+                                <li class="mx-2 ml-0">
+                                    <img class="w-11 hidden lg:inline-block" src="img/discord_icon_130958.png" alt="Author Image">
+                                </li>
+                                <li class="mx-2 ml-0">
+                                    <span class="article-list-author">Author</span>
+                                </li>
+                                <li class="mx-2 ml-0">
+                                    <span class="font-semibold md:font-medium text-gray-500 md:text-xl">1 hours ago</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden mt-3 xl:mt-5 lg:flex">
+                            <span class="rounded-lg bg-primary-100 flex items-center">
+                                <svg class="w-8 m-2 xl:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white">
+                                    <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+                                </svg>
+                                <p class="uppercase text-white text-lg pr-4">share</p>
+                            </span>
+                        </div>
+                    </div> <!-- article contents -->
+                </div>  
+            </article> <!-- article container -->
+
+            <article class="border-b-2 border-gray-400 mb-3">
+                <div class="grid grid-cols-2 mb-3 xl:flex">
+                    <div class="main-list-image min-w-full max-w-full xl:min-w-40 xl:max-w-40">
+                        <img class="w-full object-cover" src="articles/Lucian_19.jpg" alt="Article Featured Image">
+                    </div> <!-- article feature image -->
+                    <div class="main-list-title-container">
+
+                        <div class="hidden lg:inline-block articles-tags-container mb-2">
+                            <h4 class="uppercase text-sm md:text-lg lg:text-xl text-white p-1 md:p-2 lg:p-1 lg:pl-2 lg:pr-2"">moba</h4>
+                        </div> <!-- article category container-->
+
+                        <h1 class="article-list-title">Faker's Guide on How to Play as Lucian Mid</h1>
+                        <p class="hidden md:inline-block text-lg xl:text-lg font-medium xl:font-normal text-gray-700">Here's something about Dark Souls that you must've never heard</p>
+                        <div class="mt-0 md:mt-1 lg:mt-1">
+                            <ul class="flex items-center">
+                                <li class="mx-2 ml-0">
+                                    <span class="text-base md:text-xl">by</span>
+                                </li>
+                                <li class="mx-2 ml-0">
+                                    <img class="w-11 hidden lg:inline-block" src="img/discord_icon_130958.png" alt="Author Image">
+                                </li>
+                                <li class="mx-2 ml-0">
+                                    <span class="article-list-author">Author</span>
+                                </li>
+                                <li class="mx-2 ml-0">
+                                    <span class="font-semibold md:font-medium text-gray-500 md:text-xl">1 hours ago</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden mt-3 xl:mt-5 lg:flex">
+                            <span class="rounded-lg bg-primary-100 flex items-center">
+                                <svg class="w-8 m-2 xl:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white">
+                                    <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+                                </svg>
+                                <p class="uppercase text-white text-lg pr-4">share</p>
+                            </span>
+                        </div>
+                    </div> <!-- article contents -->
+                </div>  
+            </article> <!-- article container -->
+
+            <article class="border-b-2 border-gray-400 mb-3">
+                <div class="grid grid-cols-2 mb-3 xl:flex">
+                    <div class="main-list-image min-w-full max-w-full xl:min-w-40 xl:max-w-40">
+                        <img class="w-full object-cover" src="articles/Sivir_16.jpg" alt="Article Featured Image">
+                    </div> <!-- article feature image -->
+                    <div class="main-list-title-container">
+
+                        <div class="hidden lg:inline-block articles-tags-container mb-2">
+                            <h4 class="uppercase text-sm md:text-lg lg:text-xl text-white p-1 md:p-2 lg:p-1 lg:pl-2 lg:pr-2"">moba</h4>
+                        </div> <!-- article category container-->
+                        
+                        <h1 class="article-list-title">Here's Why You Must Learn How to Play Sivir in Season 11</h1>
+                        <p class="hidden md:inline-block text-lg xl:text-lg font-medium xl:font-normal text-gray-700">Here's something about Dark Souls that you must've never heard</p>
+                        <div class="mt-0 md:mt-1 lg:mt-1">
+                            <ul class="flex items-center">
+                                <li class="mx-2 ml-0">
+                                    <span class="text-base md:text-xl">by</span>
+                                </li>
+                                <li class="mx-2 ml-0">
+                                    <img class="w-11 hidden lg:inline-block" src="img/discord_icon_130958.png" alt="Author Image">
+                                </li>
+                                <li class="mx-2 ml-0">
+                                    <span class="article-list-author">Author</span>
+                                </li>
+                                <li class="mx-2 ml-0">
+                                    <span class="font-semibold md:font-medium text-gray-500 md:text-xl">1 hours ago</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden mt-3 xl:mt-5 lg:flex">
+                            <span class="rounded-lg bg-primary-100 flex items-center">
+                                <svg class="w-8 m-2 xl:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white">
+                                    <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+                                </svg>
+                                <p class="uppercase text-white text-lg pr-4">share</p>
+                            </span>
+                        </div>
+                    </div> <!-- article contents -->
+                </div>  
+            </article> <!-- article container -->
+    
+            <article class="border-b-2 border-gray-400 mb-3">
+                <div class="grid grid-cols-2 mb-3 xl:flex">
+                    <div class="main-list-image min-w-full max-w-full xl:min-w-40 xl:max-w-40">
+                        <img class="w-full object-cover" src="articles/unnamed.jpg" alt="Article Featured Image">
+                    </div> <!-- article feature image -->
+                    <div class="main-list-title-container">
+
+                        <div class="hidden lg:inline-block articles-tags-container mb-2">
+                            <h4 class="uppercase text-sm md:text-lg lg:text-xl text-white p-1 md:p-2 lg:p-1 lg:pl-2 lg:pr-2"">moba</h4>
+                        </div> <!-- article category container-->
+                        
+                        <h1 class="article-list-title">T1 is Back (and With a Bang)</h1>
+                        <p class="hidden md:inline-block text-lg xl:text-lg font-medium xl:font-normal text-gray-700">Here's something about Dark Souls that you must've never heard</p>
+                        <div class="mt-0 md:mt-1 lg:mt-1">
+                            <ul class="flex items-center">
+                                <li class="mx-2 ml-0">
+                                    <span class="text-base md:text-xl">by</span>
+                                </li>
+                                <li class="mx-2 ml-0">
+                                    <img class="w-11 hidden lg:inline-block" src="img/discord_icon_130958.png" alt="Author Image">
+                                </li>
+                                <li class="mx-2 ml-0">
+                                    <span class="article-list-author">Author</span>
+                                </li>
+                                <li class="mx-2 ml-0">
+                                    <span class="font-semibold md:font-medium text-gray-500 md:text-xl">1 hours ago</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden mt-3 xl:mt-5 lg:flex">
+                            <span class="rounded-lg bg-primary-100 flex items-center">
+                                <svg class="w-8 m-2 xl:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white">
+                                    <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+                                </svg>
+                                <p class="uppercase text-white text-lg pr-4">share</p>
+                            </span>
+                        </div>
+                    </div> <!-- article contents -->
+                </div>  
+            </article> <!-- article container -->
+
+        </section> <!-- article list section -->
+
+
+
+        <footer class="grid grid-cols-3 bg-primary-100 px-3 py-5 mt-5">
+            <div class="col-span-1 flex justify-start ml-0 lg:ml-7 xl:ml-28">
+                <ul class="text-white uppercase font-medium">
+                    <li class="pb-2">
+                        <h5 class="text-sm md:text-xl xl:text-lg">about us</h5>
+                    </li>
+                    <li class="pb-2">
+                        <h5 class="text-sm md:text-xl xl:text-lg">contact us</h5>
+                    </li class="pb-2">
+                    <li class="text-sm md:text-xl xl:text-lg mt-0 lg:mt-4"> © <script>
+                            document.write(new Date().getFullYear())
+                        </script> Mobaspot</li>
+                </ul>
+            </div>
+            <div class="col-span-2 flex justify-end mr-0 lg:mr-7 xl:mr-24">
+                <img class="w-3/4 md:w-1/2 md:object-scale-down md:-mt-6 lg:w-1/3" src="img/LogoMakr-90bq3G.png" alt="Mobaspot Footer Logo">
+            </div>
+        </footer> <!-- footer components -->
+
+    </div> <!-- main container -->
+
+    <script src="fontawesome/js/all.min.js"></script>
+</body>
+
+</html>

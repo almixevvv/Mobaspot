@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobaspot - Template</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+</head>
+
+<body class="font-ubuntu">
+
+    <div>
+        <header class="sticky top-0 z-20">
+
+            <div  x-data="{ isOpen: false }">
+
+                <div x-bind:class="{'-translate-x-0' : isOpen}" class="transform duration-300 fixed top-0 right-0 bg-white h-full z-30 overflow-x-hidden border-l-2 border-gray-300 translate-x-56 w-56">
+                    <div>
+                        <svg @click="{isOpen = !isOpen }" class="w-10 md:w-12 ml-2 mt-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div> <!-- close button -->
+                    <div class="mt-10">
+                        <ul>
+                            <li class="hamburger-nav">
+                                <a class="text-base md:text-xl" href="index.html">
+                                    home
+                                </a>
+                            </li>
+                            <li class="hamburger-nav">
+                                <a class="text-base md:text-xl" href="topics.html">
+                                    moba
+                                </a>
+                            </li>
+                            <li class="hamburger-nav">
+                                <a class="text-base md:text-xl" href="topics.html">
+                                    pc  
+                                </a>
+                            </li>
+                            <li class="hamburger-nav">
+                                <a class="text-base md:text-xl" href="topics.html">
+                                    culture
+                                </a>
+                            </li>
+                        </ul>
+                    </div> <!-- menu list -->
+
+                    <div class="mt-20">
+                        <ul>
+                            <li class="hamburger-nav">
+                                <a class="text-base md:text-xl"href="#">about us</a>
+                            </li>
+                            <li class="hamburger-nav">
+                                <a class="text-base md:text-xl"href="#">
+                                    contact us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex justify-center mt-16">
+                        <img class="w-36 object-cover" src="img/LogoMakr-90bq3G.png" alt="Mobaspot Logo">
+                    </div>
+                </div> <!-- sidebar container -->
+
+                <div class="flex justify-between bg-primary-100 p-2 z-30 ">
+                    <span>
+                        <img class="w-20 md:w-36 ml-0 lg:ml-7" src="img/LogoMakr-90bq3G.png" alt="Mobaspot Logo">
+                    </span>
+                    <span class="hidden lg:flex lg:items-center">
+                        <ul class="flex">
+                            <li class="navbar-nav">news</li>
+                            <li class="navbar-nav">culture</li>
+                            <li class="navbar-nav">review</li>
+                            <li class="navbar-nav">list</li>
+                            <li class="navbar-nav">
+                                <svg class="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                                  </svg>
+                            </li>
+                        </ul>
+                    </span> <!-- desktop navbar -->
+                    
+                    <span class="flex bg-primary-200 rounded md:mr-5 lg:hidden md:items-center md:px-2">
+                        <svg @click="isOpen = !isOpen" x-bind:class="{'rotate-90' : isOpen}" class="transform duration-300 h-9 md:h-12 p-1" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke="white">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- hamburger here -->
+                    </span>
+                </div> <!-- navbar container here -->
+
+            </div> <!-- mobile header container here -->
+
+        </header>
+
+        <section class="mx-2 mt-8 mb-8">
+            <div class="flex items-center bg-gray-200 rounded p-5">  
+                <div class="mr-4">
+                    <img class="w-40" src="img/discord_icon_130958.png" alt="Author Image">
+                </div>
+                <div>
+                    <span>
+                        <h5 class="text-xl text-gray-700 font-medium uppercase">Author Name</h5>
+                    </span>
+                    <span>
+                        <p class="text-gray-600 font-medium">Lorem ipsum dolor sit amet, sonsectetur adipiscingg elit, sed do eiusmod tempor</p>
+                    </span>
+                </div>
+            </div>
+        </section> <!-- author section -->
+
+        <section class="mt-5 mb-5 px-2 relative">
+            <div class="border-b-2 border-primary-100 mb-5">
+                <h3 class="uppercase text-primary-100 text-2xl font-bold">editor picks</h3>
+                <div class="categories-separator-end absolute right-2 top-3">
+                </div> <!-- triangle section here -->
+            </div> <!-- article category separator -->
+
+            <article class="border-b-2 border-gray-400 mb-3">
+                <div class="grid grid-cols-2 mb-3">
+                    <div>
+                        <img class="w-full" src="articles/Image 8.png" alt="Article Featured Image">
+                    </div> <!-- article feature image -->
+                    <div class="ml-2 -mt-1">
+                        <h1 class="article-list-title">Dark Souls and Something</h1>
+                        <div>
+                            <span>by</span>
+                            <span class="article-list-author">Author</span>
+                            <span class="font-semibold text-gray-500">1 hours ago</span>
+                        </div>
+                    </div> <!-- article contents -->
+                </div>  
+            </article> <!-- article container -->
+
+            <article class="border-b-2 border-gray-400 mb-3">
+                <div class="grid grid-cols-2 mb-3">
+                    <div>
+                        <img class="w-full" src="articles/Image 9.png" alt="Article Featured Image">
+                    </div> <!-- article feature image -->
+                    <div class="ml-2 -mt-1">
+                        <h1 class="article-list-title">Why Assassin's Creed Odssey is a Must Play in 2021</h1>
+                        <div>
+                            <span>by</span>
+                            <span class="article-list-author">Author</span>
+                            <span class="font-semibold text-gray-500">1 hours ago</span>
+                        </div>
+                    </div> <!-- article contents -->
+                </div>  
+            </article> <!-- article container -->
+
+            <article class="border-b-2 border-gray-400 mb-3">
+                <div class="grid grid-cols-2 mb-3">
+                    <div>
+                        <img class="w-full" src="articles/Image 10.png" alt="Article Featured Image">
+                    </div> <!-- article feature image -->
+                    <div class="ml-2 -mt-1">
+                        <h1 class="article-list-title">Faker's Guide on How to Play as Lucian Mid</h1>
+                        <div>
+                            <span>by</span>
+                            <span class="article-list-author">Author</span>
+                            <span class="font-semibold text-gray-500">1 hours ago</span>
+                        </div>
+                    </div> <!-- article contents -->
+                </div>  
+            </article> <!-- article container -->
+
+            <article class="border-b-2 border-gray-400 mb-3">
+                <div class="grid grid-cols-2 mb-3">
+                    <div>
+                        <img class="w-full" src="articles/Image 11.png" alt="Article Featured Image">
+                    </div> <!-- article feature image -->
+                    <div class="ml-2 -mt-1">
+                        <h1 class="article-list-title">Here's Why You Must Learn How to Play Sivir in Season 11</h1>
+                        <div>
+                            <span>by</span>
+                            <span class="article-list-author">Author</span>
+                            <span class="font-semibold text-gray-500">1 hours ago</span>
+                        </div>
+                    </div> <!-- article contents -->
+                </div>  
+            </article> <!-- article container -->
+    
+            <article class="border-b-2 border-gray-400 mb-3">
+                <div class="grid grid-cols-2 mb-3">
+                    <div>
+                        <img class="w-full" src="articles/Image 12.png" alt="Article Featured Image">
+                    </div> <!-- article feature image -->
+                    <div class="ml-2 -mt-1">
+                        <h1 class="article-list-title">T1 is Back (and With a Bang)</h1>
+                        <div>
+                            <span>by</span>
+                            <span class="article-list-author">Author</span>
+                            <span class="font-semibold text-gray-500">1 hours ago</span>
+                        </div>
+                    </div> <!-- article contents -->
+                </div>  
+            </article> <!-- article container -->
+
+        </section> <!-- article list section -->
+
+        <section class="w-full">
+            <div class="relative">
+                <img class="w-full object-cover" src="articles/Image 14.png" alt="Featured Image 1">
+                <div class="absolute bottom-0 bg-gradient-to-t from-black w-full pb-4 pl-2">
+                    <div class="z-20 text-gray-200 font-semibold">
+                        <h3 class="text-2xl">Meet the Woman That Your Son is Simping</h3>
+                    </div>
+                    <div>
+                        <h4 class="inline-block text-gray-200 font-normal mr-1">by</h4>
+                        <h5 class="inline-block text-gray-200 font-semibold mr-1">Author</h5>
+                        <p class="inline-block text-gray-400 font-light">1 hour ago</p>
+                    </div>
+                </div> <!-- article titles -->
+            </div>
+
+        </section> <!-- main article here -->
+
+        <footer class="grid grid-cols-3 bg-primary-100 px-3 py-5 mt-5">
+            <div class="col-span-1 flex justify-start ml-0 lg:ml-7">
+                <ul class="text-white uppercase font-medium">
+                    <li class="pb-2">
+                        <h5 class="text-sm md:text-xl">about us</h5>
+                    </li>
+                    <li class="pb-2">
+                        <h5 class="text-sm md:text-xl">contact us</h5>
+                    </li class="pb-2">
+                    <li class="text-sm md:text-xl mt-0 lg:mt-4"> © <script>
+                            document.write(new Date().getFullYear())
+                        </script> Mobaspot</li>
+                </ul>
+            </div>
+            <div class="col-span-2 flex justify-end mr-0 lg:mr-7">
+                <img class="w-3/4 md:w-1/2 md:object-scale-down md:-mt-6 lg:w-1/3" src="img/LogoMakr-90bq3G.png" alt="Mobaspot Footer Logo">
+            </div>
+        </footer> <!-- footer components -->
+
+    </div> <!-- main container -->
+
+</body>
+
+</html>
