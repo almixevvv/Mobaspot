@@ -4,6 +4,7 @@
 	"description": "basic web template",
 	"main": "basic-tailwind.config.js",
 	"dependencies": {
+		"alpinejs": "^2.8.2",
 		"autoprefixer": "^10.2.5",
 		"postcss": "^8.2.8",
 		"slick-carousel": "^1.8.1",
@@ -18,7 +19,10 @@
 		"type": "git",
 		"url": "git+https://github.com/almixevvv/Mobaspot.git"
 	},
-	"keywords": [ "Wordpress", "Template" ],
+	"keywords": [
+		"Wordpress",
+		"Template"
+	],
 	"author": "Al Mixev Victoro",
 	"license": "ISC",
 	"bugs": {
